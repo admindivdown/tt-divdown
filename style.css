@@ -1,0 +1,63 @@
+:root{--text:#222;--btn: #000;--btn-bg:rgba(0,0,0,.08);--btn-border:rgba(0,0,0,.25)}
+.top-navbar{width:100%;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;margin:0 0 6px;background:transparent;position:relative;z-index:100}
+
+.navbar-brand{display:flex;align-items:center;font-weight:900;font-size:26px;color:#000;padding-left:8px;line-height:1}
+.navbar-brand span{font-family:'Playfair Display',serif;font-style:normal;font-weight:700;letter-spacing:2px;position:relative;display:inline-block;background:linear-gradient(90deg,#229c93,#000000,#0e970c,#4df329,#000);background-size:300% 100%;background-position:0 0;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmerMove 6s ease 1 forwards}
+.navbar-brand span::first-letter{font-size:38px;font-style:normal;font-weight:900;letter-spacing:1px}
+@keyframes shimmerMove{0%{background-position:0 0}100%{background-position:300% 0}}
+
+.nav-right{display:flex;align-items:center;gap:12px;padding-right:4px}
+.lang-btn{background:var(--btn-bg);border:1px solid var(--btn-border);color:#000;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer}
+.menu-btn{background:var(--btn-bg);border:1px solid var(--btn-border);width:38px;height:38px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer}
+.menu-btn span{display:block;width:18px;height:2px;background:#000;border-radius:2px}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{font-family:'Inter',sans-serif;background:#fff;color:var(--text);min-height:100vh;display:flex;flex-direction:column;padding:0 0 40px;overflow-x:hidden}
+
+h1{font-size:2.5rem;font-weight:700;text-align:center;color:#fff;line-height:1.15;margin-bottom:22px;margin-top:-14px}
+
+input::placeholder{color:#7a7a7a}
+
+/* Rumah 1 */
+.main-area{align-self:stretch;width:100%;max-width:none;background:linear-gradient(180deg,#087f83 0%,#086b68 38%,#075b50 68%,#043c35 100%);border-radius:0 0 28px 28px;padding:56px 20px 36px;margin:0 0 24px;overflow:visible;position:relative;box-sizing:border-box}
+
+/* Search */
+.search-container{max-width:450px;width:100%;margin:35px auto 0;display:flex;flex-direction:column;gap:14px}
+
+input[type=text]{width:100%;padding:18px 22px;border:2px solid #111;border-radius:999px;background:#fff;color:#222;font-size:16px;outline:none;box-shadow:none}
+
+button#downloadBtn{width:100%;padding:18px;border:none;border-radius:999px;background:linear-gradient(180deg,#1CC9A2 0%,#0F8F72 45%,#075F4E 72%,#031615 100%);color:#fff;font-size:17px;font-weight:700;cursor:pointer;border:3px solid #FFFFFF;box-shadow:none;outline:none;-webkit-tap-highlight-color:transparent;transition:.2s}
+
+button#downloadBtn:hover{opacity:.95;transform:translateY(-1px)}
+button#downloadBtn:active{transform:translateY(0);box-shadow:none}
+
+
+/* Result */
+.result{display:none;max-width:450px;margin:18px auto 0}
+.result.active{display:block}
+.download-btn{display:inline-block;margin-top:10px;padding:12px 22px;border-radius:999px;background:#fff;color:#222;text-decoration:none;font-weight:600}
+
+/* Feature */
+.feature-box{max-width:390px;margin:22px auto 0;padding:16px;background:rgba(255,255,255,.18);border-radius:14px;text-align:center}
+.feature-box h2{font-size:20px;color:#fff;margin-bottom:8px}
+.feature-box p,.feature-box li{font-size:14px;line-height:1.7;color:#eef8ff}
+.feature-box ul{list-style:none;margin-top:10px}
+
+/* Home */
+.home-btn{position:fixed;top:12px;right:12px;padding:8px 14px;border:none;border-radius:999px;background:#fff;font-size:14px;font-weight:600;cursor:pointer;z-index:9999}
+
+.home-popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);align-items:center;justify-content:center;z-index:10000}
+.popup-box{background:#fff;border-radius:16px;padding:26px;max-width:320px;text-align:center}
+.popup-box h3{margin-bottom:18px}
+.popup-box button{padding:10px 20px;margin:5px;border:none;border-radius:10px;background:#89cfff;font-weight:600}
+
+/* Footer */
+footer{margin-top:26px;text-align:center;font-size:13px;color:#666}
+
+/* Spinner */
+.spinner{display:inline-block;width:16px;height:16px;border:3px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Mobile */
+@media(max-width:480px){h1{font-size:1.9rem}.main-area{padding:48px 18px 30px}input[type=text],button#downloadBtn{padding:17px;font-size:16px}}
